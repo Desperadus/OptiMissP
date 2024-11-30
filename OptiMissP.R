@@ -1,3 +1,12 @@
+if (!require(devtools)) {
+  install.packages("devtools")
+}
+library(devtools)
+if (!require(TDAmapper)) {
+  devtools::install_github("paultpearson/TDAmapper")
+}
+library(TDAmapper)
+
 packages <- c("shiny","TDAmapper","igraph","Matrix","ggplot2","pcaMethods","plyr","dplyr","missForest","mvdalab","readxl")
 
 package.check <- lapply(
